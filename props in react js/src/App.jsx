@@ -3,6 +3,7 @@ import './App.css'
 import User from './assets/User'
 import Array from './assets/Array'
 import Click from './assets/Click'
+import Wrapper from './Wrapper'
 
 function App() {
   let userObj= {
@@ -30,6 +31,16 @@ function App() {
       <User user={userObj1}/>
       <Array names={arrName}/>
       <Click names="ishu"/>
+      <Wrapper color="blue">
+        <h1>hello harsh wrapper</h1>
+      </Wrapper>
+      <Wrapper color="pink">
+        <h1>hello muskan wrapper</h1>
+      </Wrapper>
+      <Wrapper>
+        <h1>hello isha wrapper</h1>
+        <h2>is kihion njikop0</h2>
+      </Wrapper>
     </>
   )
 }
