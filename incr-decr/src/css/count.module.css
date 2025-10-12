@@ -1,0 +1,21 @@
+.buy {
+  width: 200px;
+  background-color: green;
+
+  margin: 20px;
+}
+.res{
+  background-color: grey;
+  margin-top: 20px;
+  width: 100px;
+
+}
+input{
+  width: 200px;
+  border-radius: 80px;
+  outline: none;
+  border: none;
+  height: 30px;
+  padding-left: 10px;
+ 
+}
