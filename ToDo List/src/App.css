@@ -1,24 +1,12 @@
 #root {
-
-
-
   text-align: center;
 }
 
-
-
-
-
-
-
-form{
+form {
   width: 1170px;
   margin: auto;
   display: flex;
-
-  
 }
-form input{
+form input {
   flex-basis: 70%;
-
 }
