@@ -1,12 +1,9 @@
+@import "tailwindcss";
 #root {
   text-align: center;
 }
+body{
+  background-color: black;
+}
 
-form {
-  width: 1170px;
-  margin: auto;
-  display: flex;
-}
-form input {
-  flex-basis: 70%;
-}
+
