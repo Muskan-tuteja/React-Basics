@@ -8,6 +8,7 @@
   color: wheat;
 }
 body{
+  background: burlywood;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +30,7 @@ li {
 }
 a {
   color: black;
-  text-decoration: none;
+
  font-size: 20px;
 
 
@@ -37,11 +38,14 @@ a {
 }
 
 a:hover {
-  color: yellow; /* hover पर color बदलने के लिए (optional) */
+  color: blue; /* hover पर color बदलने के लिए (optional) */
 }
 .page{
   text-align: center;
   padding: 10px;
+}
+.users{
+  margin-left: 10px;
 }
 
 

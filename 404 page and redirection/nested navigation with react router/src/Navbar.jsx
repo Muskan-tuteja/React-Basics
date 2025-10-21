@@ -12,13 +12,19 @@ export default function Navbar() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/user/login">Login</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/student">Student</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+            <li>
+              <Link to="/users/list">List</Link>
             </li>
           </ul>
         </div>

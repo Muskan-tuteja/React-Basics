@@ -8,29 +8,35 @@ import "./App.css";
 import PageNotFound from "./pagenotfound";
 import Class from "./Class";
 import Age from "./Age";
+import Users from "./users";
+import UsersDetails from "./UsersDetails";
 
 function App() {
   return (
     <>
       {/* <Navbar /> */}
 
-
       <Routes>
+        <Route element={<Navbar />}>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/users/list?" element={<Users/>}></Route>
+          
+          <Route path="/users/:id/:name?" element={<UsersDetails/>}></Route>
 
-        <Route element={<Navbar/>}>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/about" element={<About />}></Route>
-
+          <Route path="/user"> 
+            <Route path="login" element={<Login />}></Route>
+            </Route>
+         
+          <Route path="/about" element={<About />}></Route>
         </Route>
-        
+
         <Route path="/student" element={<Student />}>
           {" "}
           <Route index element={<Class />}></Route>
           <Route path="age" element={<Age />}></Route>
         </Route>
-        {/* <Route path="/*" element={<PageNotFound />}></Route> */}
-        <Route path="/*" element={<Navigate to="/"/>}></Route>
+        <Route path="/*" element={<PageNotFound />}></Route>
+        {/* <Route path="/*" element={<Navigate to="/" />}></Route> */}
       </Routes>
     </>
   );
