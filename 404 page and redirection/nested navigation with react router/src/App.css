@@ -47,5 +47,9 @@ a:hover {
 .users{
   margin-left: 10px;
 }
+.active{
+  font-weight: 800;
+  color: blue;
+}
 
 
