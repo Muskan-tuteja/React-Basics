@@ -1,0 +1,24 @@
+{
+  "users":[
+    {
+      "name":"Muskan",
+      "age":"26",
+      "email":"muskan@test.com"
+    },
+    {
+      "name":"Muskan",
+      "age":"26",
+      "email":"muskan@test.com"
+    },
+    {
+      "name":"Muskan",
+      "age":"26",
+      "email":"muskan@test.com"
+    },
+    {
+      "name":"Muskan",
+      "age":"26",
+      "email":"muskan@test.com"
+    }
+  ]
+}
