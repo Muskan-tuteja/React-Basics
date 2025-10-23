@@ -1,24 +1,28 @@
 {
-  "users":[
+  "users": [
     {
-      "name":"Muskan",
-      "age":"26",
-      "email":"muskan@test.com"
+      "name": "Hello",
+      "age": "86",
+      "email": "muskan@test.com",
+      "id": "366d"
     },
     {
-      "name":"Muskan",
-      "age":"26",
-      "email":"muskan@test.com"
+      "name": "Mahi",
+      "age": "29",
+      "email": "muskan@test.com",
+      "id": "84f5"
     },
     {
-      "name":"Muskan",
-      "age":"26",
-      "email":"muskan@test.com"
+      "id": "be14",
+      "name": "hashuu",
+      "email": "hashii@gmail.com",
+      "age": "23"
     },
     {
-      "name":"Muskan",
-      "age":"26",
-      "email":"muskan@test.com"
+      "id": "dd4b",
+      "name": "sus",
+      "email": "sus@gmail.com",
+      "age": "109"
     }
   ]
 }
