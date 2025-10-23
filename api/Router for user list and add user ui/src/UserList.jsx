@@ -2,11 +2,13 @@
 import { useEffect } from 'react'
 import './App.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router';
 
 export default function UserList() {
     const url = "http://localhost:3000/users";
   const[useData, setUseData] = useState([])
   const[loading,setLoading] = useState(false)
+  const navigate = useNavigate()
    useEffect(()=>{
     setLoading(true)
     getUserData()
@@ -14,7 +16,6 @@ export default function UserList() {
     },[])
   const getUserData = async ()=>{
    
-    const url="http://localhost:3000/users"
     let response= await fetch(url)
     response = await response.json()
     console.log(response)
@@ -32,6 +33,10 @@ export default function UserList() {
     getUserData()
    }
   }
+  const editdUser=(id)=>{
+    navigate("/edit/"+id)
+
+  }
  
 
   return (
@@ -44,6 +49,7 @@ export default function UserList() {
         <li>{user.email}</li>
         <li>{user.age}</li>
         <li><button onClick={()=>detedUser(user.id)}>Deleted</button></li>
+        <li><button onClick={()=>editdUser(user.id)}>Edit</button></li>
         </h1>
 
       ))

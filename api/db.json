@@ -1,28 +1,22 @@
 {
   "users": [
     {
-      "name": "Hello",
-      "age": "86",
+      "name": "Mahihj",
       "email": "muskan@test.com",
-      "id": "366d"
-    },
-    {
-      "name": "Mahi",
       "age": "29",
-      "email": "muskan@test.com",
       "id": "84f5"
     },
     {
-      "id": "be14",
-      "name": "hashuu",
+      "name": "hashuunji",
       "email": "hashii@gmail.com",
-      "age": "23"
+      "age": "67",
+      "id": "be14"
     },
     {
-      "id": "dd4b",
-      "name": "sus",
+      "name": "sussdgy",
       "email": "sus@gmail.com",
-      "age": "109"
+      "age": "102",
+      "id": "dd4b"
     }
   ]
 }
