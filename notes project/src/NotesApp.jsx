@@ -16,14 +16,14 @@ const NotesApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 flex flex-col items-center py-10 px-4">
+    <div className="min-h-screen  from-pink-400 via-purple-500 to-indigo-500 flex flex-col items-center py-10 px-4 bg-blue-300">
       <h1 className="text-4xl font-extrabold text-white mb-8 drop-shadow-lg">
         📝 My Notes
       </h1>
 
       {/* Input Area */}
       <div className="flex flex-col sm:flex-row gap-3 mb-10 w-full max-w-md">
-        <input
+        <input 
           type="text"
           value={note}
           onChange={(e) => setNote(e.target.value)}
@@ -46,12 +46,12 @@ const NotesApp = () => {
           {notes.map((n, index) => (
            <div
   key={index}
-  className="bg-white/20 p-5 rounded-lg shadow-md relative flex flex-col justify-between"
+  className="bg-white/20 p-5 rounded-lg shadow-md relative flex flex-col justify-between pt-7"
 >
-  <p className="text-lg break-words mb-8">{n}</p>
+  <p className="text-lg wrap-break-word mb-8">{n}</p>
   <button
     onClick={() => handleDelete(index)}
-    className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-sm rounded hover:bg-red-600 transition-all"
+    className="absolute top-0 right-0 bg-red-500 text-white px-1  py-1 text-sm rounded hover:bg-red-600 transition-all"
   >
     Delete
   </button>
