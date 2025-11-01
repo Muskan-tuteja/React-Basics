@@ -1,7 +1,9 @@
 import React from "react";
-import {useDispatch} from "react-redux"
+import {useDispatch,useSelector} from "react-redux"
 import { AddToCart } from "./AddToCart";
 import { addItem, removeItem } from "./redux/slice";
+import { useEffect } from "react";
+import {fetchProducts} from './redux/productSlice'
 
 
 
@@ -30,6 +32,13 @@ export const Products = () => {
     },
   ];
   const dispatch= useDispatch()
+  useEffect(()=>{
+    dispatch(fetchProducts())
+
+  },[])
+  const selector=useSelector((state)=>state.products.items)
+  console.log(selector)
+
 
   return (
     <section className="products-section">
