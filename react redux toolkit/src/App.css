@@ -184,6 +184,17 @@ nav ul li a:hover::after {
 .add-btnn:hover {
   background: rgba(255, 0, 0, 0.427);
 }
+.add-btn0{
+    background: #00e6b84e;
+     color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+
+}
 .btn1{
   background-color: green;
   border-radius: 25px;

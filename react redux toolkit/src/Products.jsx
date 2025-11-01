@@ -12,30 +12,46 @@ export const Products = () => {
   }, []);
   const selector = useSelector((state) => state.products.items);
   console.log(selector);
+    const cartSelector = useSelector((state)=>state.cart.items)
+  console.log(cartSelector.length)
 
   return (
     <>
-    <div className="grid">
-      {
-        selector.length && selector.map((items) =>(
-          <div key={items.id} className="card">
-            <img src={items.thumbnail}/>
-            <div className="content">
-              <div className="title">{items.title}</div>
-              <div className="brand">{items.brand}</div>
-              <div className="price">{items.price}</div>
-              <div className="rating">{items.rating}
+      <div className="grid">
+        {selector.length &&
+          selector.map((items) => (
+            <div key={items.id} className="card">
+              <img src={items.thumbnail} />
+              <div className="content">
+                <div className="title">{items.title}</div>
+                <div className="brand">{items.brand}</div>
+                <div className="price">{items.price}</div>
+                <div className="rating">{items.rating}</div>
+                {
+                  cartSelector.find(cartItem =>cartItem.id === items.id)? <button
+                  
+                  className="add-btn0"
+                >
+                  Add to cart
+                </button>: <button
+                  onClick={() => dispatch(addItem(items))}
+                  className="add-btn"
+                >
+                  Added to cart
+                </button>
+                }
 
+               
+                <button
+                  onClick={() => dispatch(removeItem())}
+                  className="add-btnn"
+                >
+                  Remove cart
+                </button>
               </div>
-
-<button onClick={()=>dispatch( addItem(1))} className="add-btn">Add to cart</button>
-<button onClick={()=>dispatch( removeItem())} className="add-btnn">Remove cart</button>
             </div>
-          </div>
-        ))
-      }
-    </div>
+          ))}
+      </div>
     </>
-  )
- 
+  );
 };
