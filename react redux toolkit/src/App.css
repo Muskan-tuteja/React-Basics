@@ -197,6 +197,83 @@ nav ul li a:hover::after {
 .btn1:hover{
   background-color: rgba(0, 128, 0, 0.421);
 }
+/* Container Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background-color: #f5f6fa;
+}
+
+/* Product Card */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Content Area */
+.content {
+  padding: 15px 20px;
+}
+
+/* Title */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Brand */
+.brand {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e86de;
+  margin-bottom: 8px;
+}
+
+/* Rating */
+.rating {
+  font-size: 14px;
+  color: #f39c12;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card img {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}
+
 
 
 /* Responsive Design */
