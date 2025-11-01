@@ -1,49 +1,196 @@
-.shop {
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body background */
+body {
+  background-color: rgba(208, 40, 40, 0.279);
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  background: linear-gradient(90deg, #1e1e2f, #2a2a45);
+  color: white;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  font-size: 30px;
+  align-items: center;
+  padding: 20px 90px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
 
-  height: 50px;
-  background-color: rgba(128, 128, 128, 0.096);
-  
-}
-body{
-  background-color: rgba(0, 0, 0, 0.148);
-}
-li {
-  list-style: none;
-  
-  
-}
-li a {
-  text-decoration: none;
-  color: black;
- 
-}
-ul {
-  margin: 10px 20px;
+/* Logo / Shop Name */
+.shop {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   display: flex;
-  gap: 20px;
-  
+  align-items: center;
+  gap: 30px;
 }
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e6e6e6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #00e6b8;
+  transform: scale(1.05);
+}
+
+/* Underline animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00e6b8;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Cart Icon */
 .fa-cart {
   position: relative;
   cursor: pointer;
+  font-size: 1.8rem;
+  color: #00e6b8;
+  transition: 0.3s ease;
 }
 
+.fa-cart:hover {
+  transform: scale(1.2);
+}
+
+/* Badge on cart */
 .cart-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -10px;
+  right: -10px;
   background: red;
   color: white;
-  width: 18px;
-  height: 18px;
-  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.products-section {
+  padding: 60px 80px;
+  background: #f5f6fa;
+  text-align: center;
+}
 
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1e1e2f;
+  letter-spacing: 1px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  color: #555;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.add-btn {
+  background: #00e6b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: #00c6a3;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 25px;
+  }
+
+  .shop {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+  }
+
+}
