@@ -169,6 +169,34 @@ nav ul li a:hover::after {
 .add-btn:hover {
   background: #00c6a3;
 }
+.add-btnn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+  margin-top: 19px;
+}
+
+.add-btnn:hover {
+  background: rgba(255, 0, 0, 0.427);
+}
+.btn1{
+  background-color: green;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+.btn1:hover{
+  background-color: rgba(0, 128, 0, 0.421);
+}
 
 
 /* Responsive Design */
