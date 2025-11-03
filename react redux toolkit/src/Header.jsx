@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { AddToCart } from "./AddToCart"
 
 export const Header=()=>{
@@ -7,7 +8,7 @@ export const Header=()=>{
       <div className="shop">MyShop
       <nav>
         <ul>
-      <li><a href="">Home</a></li>
+      <li><Link to="/">Home</Link></li>
       <li><a href="">About</a></li>
       <li><a href="">Cart</a></li>
     
