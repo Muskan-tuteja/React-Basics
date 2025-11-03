@@ -28,11 +28,11 @@ export const Products = () => {
                 <div className="price">{items.price}</div>
                 <div className="rating">{items.rating}</div>
                 {
-                  cartSelector.find(cartItem =>cartItem.id === items.id)? <button
+                  cartSelector.find(cartItem =>cartItem.id === items.id)? <button  onClick={() => dispatch( removeItem(items))}
                   
-                  className="add-btn0"
+                  className="add-btnn"
                 >
-                  Add to cart
+                  Remove cart
                 </button>: <button
                   onClick={() => dispatch(addItem(items))}
                   className="add-btn"
@@ -42,12 +42,7 @@ export const Products = () => {
                 }
 
                
-                <button
-                  onClick={() => dispatch(removeItem())}
-                  className="add-btnn"
-                >
-                  Remove cart
-                </button>
+                
               </div>
             </div>
           ))}
