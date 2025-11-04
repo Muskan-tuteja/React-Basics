@@ -1,10 +1,18 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { clearAllItems, removeItem } from "./redux/slice";
+import {useNavigate} from "react-router-dom"
 
 export default function CartList() {
   const cartSelector = useSelector((state) => state.cart.items);
+
   console.log(cartSelector);
 const [cartItems,setCartItems]=useState(cartSelector)
+useEffect(()=>{
+setCartItems(cartSelector)
+},[cartSelector])
+const dispatch=useDispatch()
+const navigate=useNavigate()
   const manageQuantity =(id,q)=>{
    let quantity = parseInt(q)>1?parseInt(q):1
    const cartTempItems = cartSelector.map((item)=>{
@@ -12,6 +20,12 @@ const [cartItems,setCartItems]=useState(cartSelector)
    })
    setCartItems(cartTempItems)
 
+  }
+  const handlePlaceOrder=()=>{
+    localStorage.clear()
+    dispatch(clearAllItems())
+    alert("order placed")
+    navigate("/")
   }
 
   return (
@@ -82,7 +96,7 @@ const [cartItems,setCartItems]=useState(cartSelector)
                   }}
                 />
 
-                <button
+                <button onClick={()=>dispatch(removeItem(item))}
                   style={{
                     backgroundColor: "#ff4d4d",
                     color: "#fff",
@@ -117,6 +131,8 @@ const [cartItems,setCartItems]=useState(cartSelector)
         >
           Total: ${(cartItems.reduce((sum, item) => item.quantity? sum + item.price*item.quantity:sum+item.price, 0)).toFixed(2)}
         </div>
+        <div onClick={handlePlaceOrder} style={{color:"white",fontSize:"20px",border:"1px solid black", margin:"10px",width:"80px",background:"blue",height:"60px",cursor:"pointer"}}>Place Order</div>
+       
       </div>
     </>
   );
