@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function CartList() {
   const cartSelector = useSelector((state) => state.cart.items);
   console.log(cartSelector);
+const [cartItems,setCartItems]=useState(cartSelector)
+  const manageQuantity =(id,q)=>{
+   let quantity = parseInt(q)>1?parseInt(q):1
+   const cartTempItems = cartSelector.map((item)=>{
+    return item.id==id?{...item,quantity}:item
+   })
+   setCartItems(cartTempItems)
+
+  }
 
   return (
     <>
@@ -10,12 +20,12 @@ export default function CartList() {
         <h1 style={{ textAlign: "center", marginTop: "10px" }}>
           Cart Item Listing{" "}
           <span style={{ color: "green", marginLeft: "100px" }}>
-            {cartSelector.length} items
+            {cartItems.length} items
           </span>
         </h1>
 
-        {cartSelector.length > 0 ? (
-          cartSelector.map((item) => (
+        {cartItems.length > 0 ? (
+          cartItems.map((item) => (
             <div
               key={item.id}
               style={{
@@ -54,8 +64,24 @@ export default function CartList() {
               {/* Price and Button */}
               <div style={{ textAlign: "right" }}>
                 <span style={{ fontWeight: "bold", marginRight: "15px" }}>
-                  Price: ₹{item.price}
+                  Price: ₹{(item.quantity?item.price*item.quantity:item.price).toFixed(2)}
                 </span>
+
+                <input onChange={(e)=>manageQuantity(item.id,e.target.value)}
+                  type="number"
+                  min="1"
+                  defaultValue={1}
+                  placeholder="Enter quantity"
+                  style={{
+                    width: "70px",
+                    padding: "5px",
+                    borderRadius: "6px",
+                    border: "1px solid #ccc",
+                    marginRight: "10px",
+                    textAlign: "center",
+                  }}
+                />
+
                 <button
                   style={{
                     backgroundColor: "#ff4d4d",
@@ -89,7 +115,7 @@ export default function CartList() {
             margin: "20px auto",
           }}
         >
-          Total:{cartSelector.reduce((sum, item) => sum + item.price, 0)}
+          Total: ${(cartItems.reduce((sum, item) => item.quantity? sum + item.price*item.quantity:sum+item.price, 0)).toFixed(2)}
         </div>
       </div>
     </>
