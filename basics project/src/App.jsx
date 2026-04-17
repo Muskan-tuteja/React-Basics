@@ -1,5 +1,7 @@
+import Call from "./Call"
 import Head, { Js, Login, Login1 } from "./Header"
 import Jsx from "./Jsx"
+import State from "./State"
 import Todo from "./TODO"
 
 function Header() {
@@ -12,6 +14,9 @@ function Header() {
     <Js/>
     <Todo/>
     <Jsx/>
+    <Call/>
+    <hr />
+    <State/>
     
     </>
   )
