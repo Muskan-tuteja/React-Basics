@@ -1,4 +1,5 @@
 import Call from "./Call"
+import Control from "./Control"
 import Head, { Js, Login, Login1 } from "./Header"
 import Jsx from "./Jsx"
 import Props1 from "./Props1"
@@ -26,7 +27,7 @@ function Header() {
     <State1/>
     <hr />
     <Props1 name="muskan" age={34}/>
-    
+   
     
     </>
   )
@@ -75,7 +76,11 @@ export function App3(){
     <h1>Array Function</h1>
     <hr />
     <Props4 user1={userArray}/>
+
+     <hr />
+    <Control/>
     </>
     
   )
 }
+
