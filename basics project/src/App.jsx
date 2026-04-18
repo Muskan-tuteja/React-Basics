@@ -1,6 +1,8 @@
 import Call from "./Call"
 import Checkbox from "./Checkbox"
 import Control from "./Control"
+import Effect from "./Effect"
+import EffectCount from "./EffectCount"
 import Head, { Js, Login, Login1 } from "./Header"
 import Jsx from "./Jsx"
 import Props1 from "./Props1"
@@ -15,7 +17,7 @@ function Header() {
   return(
     <>
     <h1>Hello</h1>
-    <Head/>
+    {/* <Head/>
     <Login/>
     <Login1/>
     <Js/>
@@ -27,7 +29,7 @@ function Header() {
     <hr />
     <State1/>
     <hr />
-    <Props1 name="muskan" age={34}/>
+    <Props1 name="muskan" age={34}/> */}
    
     
     </>
@@ -41,9 +43,9 @@ export function Appp(){
   let age = 34;
   return(
     <>
-    <hr />
+    {/* <hr />
     <h1>Hello multiple export</h1>
-    <Props2 name={userName} age={age}/>
+    <Props2 name={userName} age={age}/> */}
 
     </>
   )
@@ -61,11 +63,11 @@ export function App1(){
   }
   return(
     <>
-    <hr />
+    {/* <hr />
     <h1>Object Propes</h1>
     <Props3 user = {UserObj}/>
     <hr />
-    <Props3 user = {UserObj2}/>
+    <Props3 user = {UserObj2}/> */}
     </>
   )
 }
@@ -74,7 +76,7 @@ export function App3(){
   return(
     <>
      <hr />
-    <h1>Array Function</h1>
+    {/* <h1>Array Function</h1>
     <hr />
     <Props4 user1={userArray}/>
 
@@ -83,6 +85,13 @@ export function App3(){
 
     <hr />
     <Checkbox/>
+
+    <hr />
+    <Effect/> */}
+
+    <hr />
+    <hr />
+    <EffectCount/>
     </>
     
   )
