@@ -1,4 +1,5 @@
 import Call from "./Call"
+import Checkbox from "./Checkbox"
 import Control from "./Control"
 import Head, { Js, Login, Login1 } from "./Header"
 import Jsx from "./Jsx"
@@ -79,6 +80,9 @@ export function App3(){
 
      <hr />
     <Control/>
+
+    <hr />
+    <Checkbox/>
     </>
     
   )
