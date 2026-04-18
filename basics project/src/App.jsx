@@ -4,6 +4,7 @@ import Jsx from "./Jsx"
 import Props1 from "./Props1"
 import { Props2 } from "./Props2"
 import Props3 from "./Props3"
+import Props4 from "./Props4"
 import State from "./State"
 import State1 from "./State1"
 import Todo from "./TODO"
@@ -64,5 +65,17 @@ export function App1(){
     <hr />
     <Props3 user = {UserObj2}/>
     </>
+  )
+}
+export function App3(){
+  let userArray= ["muskan",23,"muksan@gmail.com"]
+  return(
+    <>
+     <hr />
+    <h1>Array Function</h1>
+    <hr />
+    <Props4 user1={userArray}/>
+    </>
+    
   )
 }
